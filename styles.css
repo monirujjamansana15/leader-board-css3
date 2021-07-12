@@ -7,11 +7,63 @@ common-styles
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #F3F1FF;
+    margin: 0;
 }
 
 /* ----------
 common-styles
 ------------- */
+
+/*-------------
+ navigation-styles 
+ ------------------*/
+.header-section{
+    width: 100%;
+    height: 94px;
+    background-color: #562EFF;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 16px;
+    margin-top: 26px;
+    margin-left: 63px;
+}
+.logo-section .logo img{
+    width: 41px;
+    height: 51px;
+    color: #FFFFFF;
+    
+}
+.logo-title{
+    font-size: 24px;
+    color: #FFFFFF;
+}
+.nav-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);   
+}
+.nav-option{
+    margin-top: 20px;
+}
+.nav-option a{
+    margin-right: 36px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.profile-icon{
+    margin-top: 6px;
+}
+
+/*-------------
+ navigation-styles 
+ ------------------*/
 
 /* ---------
 top-players 
@@ -164,3 +216,24 @@ corses-styles
 /* ------------
 corses-styles 
 --------------*/
+
+
+/*----------------
+ media-queries
+ ------------- */
+
+ /* mini-phone */
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses , .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .courses{
+        flex-direction: column;
+    }
+    .section-title{
+        text-align: center;
+    }
+}
